@@ -1,0 +1,9 @@
+defaults:
+  - default_config_schema
+  - _self_
+  - override hydra/job_logging: colorlog
+  - override hydra/hydra_logging: colorlog
+  - override hydra/launcher: joblib
+hydra:
+  job:
+    chdir: True
