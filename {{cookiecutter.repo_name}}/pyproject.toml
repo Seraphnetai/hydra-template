@@ -1,6 +1,6 @@
 [project]
 Epic = "{{cookiecutter.epic}}"
-Story = "{{cookiecutter.story"
+Story = "{{cookiecutter.story}}"
 
 [tool.poetry]
 name = "{{cookiecutter.project_name}}"
