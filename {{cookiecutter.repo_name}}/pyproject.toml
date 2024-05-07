@@ -1,6 +1,6 @@
 [project]
 Epic = "{{cookiecutter.epic}}"
-Story = "{{cookiecutter.story}}"
+Story = "{{cookiecutter.story"
 
 [tool.poetry]
 name = "{{cookiecutter.project_name}}"
@@ -12,6 +12,7 @@ packages = [{include = "{{cookiecutter.repo_name}}"}]
 maintainers = ["{{cookiecutter.author_name}} <{{cookiecutter.author_email}}>"]
 
 [tool.poetry.dependencies]
+drim-21-dictionaries = {git = "ssh://git@github.com/atlasus-ai/drim_21_dictionaries.git", rev = "master"}
 python = "^3.8"
 hydra-core = "^1.3.2"
 hydra-colorlog = "^1.2.0"
@@ -59,5 +60,6 @@ fail_under = 80
 sections = ["FUTURE", "STDLIB", "THIRDPARTY", "AGRLIB", "DRIM21DICTIONARIES", "FIRSTPARTY", "LOCALFOLDER"]
 known_first_party = []
 known_agrlib = "agr_lib"
+known_drim21dictionaries = "drim_21_dictionaries"
 multi_line_output = 5
 line_length = 120
