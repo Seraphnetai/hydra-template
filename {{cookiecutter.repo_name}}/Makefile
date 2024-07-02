@@ -1,10 +1,10 @@
 IMAGE_TAG=latest
-IMAGE_NAME=atlasus/hydra/{{cookiecutter.repo_name}}:latest
+IMAGE_NAME=seraphnet/hydra/{{cookiecutter.repo_name}}:latest
 CONTAINER_NAME={{cookiecutter.repo_name}}-${USER}
 
 
 build-image: # build docker image
-	DOCKER_CLI_EXPERIMENTAL=enabled docker buildx build --ssh default -t ${IMAGE_NAME} .
+	docker buildx build -t ${IMAGE_NAME} .
 
 test-local: # run all test locally using poetry
 	poetry run pytest

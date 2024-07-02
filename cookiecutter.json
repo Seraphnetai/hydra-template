@@ -4,7 +4,7 @@
     "main_class_name": "{{ cookiecutter.project_name.title().replace(' ', '') }}",
     "short_description": "Krótki opis projektu",
     "author_name": "Imię i nazwisko autora",
-    "author_email": "{{ cookiecutter.author_name.lower().replace(' ', '.') }}@atlasus.com",
+    "author_email": "{{ cookiecutter.author_name.lower().replace(' ', '.') }}@seraphnet.ai",
     "epic": "Numer epica z Jiry",
     "story": "Numer story z Jiry",
     "version": "0.1.0"

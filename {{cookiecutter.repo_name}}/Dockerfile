@@ -1,8 +1,8 @@
-ARG BASE_IMAGE=python:3.8.16-slim-buster
+ARG BASE_IMAGE=python:3.11-slim
 FROM $BASE_IMAGE
 
 ENV POETRY_HOME=/etc/poetry \
-    POETRY_VERSION=1.4.2 \
+    POETRY_VERSION=1.8.3 \
     POETRY_VIRTUALENVS_CREATE=0 \
     POETRY_VIRTUALENVS_IN_PROJECT=0 \
     POETRY_NO_INTERACTION=1
@@ -22,7 +22,7 @@ RUN mkdir -p -m 0600 ~/.ssh && \
     ssh-keyscan github.com >> ~/.ssh/known_hosts
 
 WORKDIR /code
-COPY ./{{cookiecutter.repo_name}} ./{{cookiecutter.repo_name}}
+COPY ./src ./{{cookiecutter.repo_name}}
 COPY ./tests ./tests
 
 # install project requirements
